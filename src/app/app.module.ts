@@ -1,16 +1,20 @@
-import { AutoCompleteModule } from '@syncfusion/ej2-angular-dropdowns';
+import { AutoCompleteModule, DropDownListAllModule } from '@syncfusion/ej2-angular-dropdowns';
+
+import { DialogModule } from '@syncfusion/ej2-angular-popups';
 
 import { MapsAllModule } from '@syncfusion/ej2-angular-maps';
 
 import { ChartAllModule, AccumulationChartAllModule, RangeNavigatorAllModule } from '@syncfusion/ej2-angular-charts';
 
-import { TextBoxModule, NumericTextBoxModule } from '@syncfusion/ej2-angular-inputs';
+import { TextBoxModule, NumericTextBoxModule, NumericTextBoxAllModule, TextBoxAllModule } from '@syncfusion/ej2-angular-inputs';
 
 import { SidebarModule } from '@syncfusion/ej2-angular-navigations';
 
-import { CheckBoxModule, ButtonAllModule } from '@syncfusion/ej2-angular-buttons';
+import { CheckBoxModule, ButtonAllModule, CheckBoxAllModule } from '@syncfusion/ej2-angular-buttons';
 
 import { DashboardLayoutModule } from '@syncfusion/ej2-angular-layouts';
+
+import { KanbanAllModule } from '@syncfusion/ej2-angular-kanban';
 
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -24,11 +28,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { KanbanBoardComponent } from './kanban-board/kanban-board.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    KanbanBoardComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +43,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MapsAllModule,
     AutoCompleteModule,
     DashboardLayoutModule,
+    KanbanAllModule,
     CheckBoxModule,
     SidebarModule,
     ButtonAllModule,
@@ -44,7 +51,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ChartAllModule,
     AccumulationChartAllModule,
     RangeNavigatorAllModule,
-    BrowserModule
+    BrowserModule,
+    DropDownListAllModule,
+    DialogModule,
+    NumericTextBoxAllModule,
+    TextBoxAllModule,
+    CheckBoxAllModule
   ],
   providers: [],
   bootstrap: [AppComponent]
